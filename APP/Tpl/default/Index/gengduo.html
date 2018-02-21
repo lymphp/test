@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head><title></title></head>
+
+    <body>
+    <if condition="$_SESSION['user'] eq null">
+    <include file="Public:top1" />
+    <else /> <include file="Public:top1_1" />
+    </if>
+    <include file="Public:top" />
+    <table width="1000" bgcolor="#faebd7" align="center">
+        <tr width="1000">
+            <td style="font-size: 24px;color: #9A0000">&nbsp;&nbsp;&nbsp;公告>>></td>
+        </tr>
+        <tr width="1000">
+            <td>
+                <table width="1000">
+                    <volist name="select" id="tongzhi"> 
+                        <tr class="content">
+                            <td style='font-size: 24px;'>●</td>
+                            <td><img src='__ROOT__/Public/images/gonggao1.jpg' />&nbsp;{$tongzhi.title} 
+                        <a href="__ROOT__/index.php/index/gonggaoxiangqin?id={$tongzhi.id}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看详情>>></a>
+                            </td>
+                        </tr>
+                    </volist>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <include file="Public:bottom" />
+</body>
+</html>
+
+
+

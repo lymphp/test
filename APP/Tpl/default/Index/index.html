@@ -1,0 +1,519 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>平武特产网站</title>
+        <link href="__ROOT__/Public/css/cssreset.css" rel="stylesheet" type="text/css">
+        <link href="__ROOT__/Public/css/main.css" rel="stylesheet" type="text/css">
+        <link href="__ROOT__/Public/css/font.css" rel="stylesheet" type="text/css">
+        <!--<load href="__PUBLIC__/css/cssreset.css"/>
+        <load href="__PUBLIC__/css/main.css"/>
+        <load href="__PUBLIC__/css/font.css"/>-->
+        <style type="text/css">
+            a.topcs:link{
+                color: black;
+                font-size:14px;
+                text-decoration:none;
+            }
+            a.topcs:hover{
+                font-size:17px;
+                color: #AA1111;
+                text-decoration:none;}
+            a.topcs:visited{
+                font-size:14px;
+                color: black;
+                text-decoration:none;}
+            a.topcs:active{
+                color: #CC0000;
+                font-size:14px;
+                text-decoration:none;}
+            .topcs{
+                list-style-type: square;
+            }
+            nav{
+                position:absolute;
+                left:50px;
+                top:100px;
+                border:1px solid #b61d1d;
+            }
+        </style>
+    </head>
+
+    <body bgcolor="#faebd7">
+    <if condition="$_SESSION['user'] eq null">
+    <include file="Public:top1" />
+    <else /> <include file="Public:top1_1" />
+    </if>
+    <include file="Public:top" />
+    <nav>
+        <div class="all">
+            <font color="white">
+            全部商品分类</font>
+        </div>
+
+
+        <ul>
+
+            <div align="left"> &nbsp;
+            </div>
+            <li class="nav_item"><a href="#">健康饮品</a><span class="jt">&gt;</span>
+                <div class="sub_menu">
+                    <div class="leftmenu">
+                        <dl>
+                            <dt>
+                            <volist name="selectsmalltype1" id="sst1">
+                                <dd><a href='#'>&nbsp;</a></dd>
+                                <dd><a href='__APP__/Index/looktype?id={$sst1.id}'>{$sst1['smalltype_name']}</a></dd>
+                            </volist>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <div align="left"> &nbsp;
+            </div>
+            <li class="nav_item"><a href="#">肉类制品</a><span class="jt">&gt;</span>
+                <div class="sub_menu">
+                    <div class="leftmenu">
+                        <dl>
+                            <dt>
+                            <volist name="selectsmalltype2" id="sst2">
+                                <dd><a href='#'>&nbsp;</a></dd>
+                                <dd><a href='__APP__/Index/looktype?id={$sst2.id}'>{$sst2['smalltype_name']}</a></dd>
+                            </volist>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <div align="left"> &nbsp;
+            </div>
+            <li class="nav_item"><a href="#">果蔬制品</a><span class="jt">&gt;</span>
+                <div class="sub_menu">
+                    <div class="leftmenu">
+                        <dl>
+                            <dt>
+                            <volist name="selectsmalltype3" id="sst3">
+                                <dd><a href='#'>&nbsp;</a></dd>
+                                <dd><a href='__APP__/Index/looktype?id={$sst3.id}'>{$sst3['smalltype_name']}</a></dd>
+                            </volist>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <div align="left"> &nbsp;
+            </div>
+            <li class="nav_item"><a href="#">野菌干果</a><span class="jt">&gt;</span>
+                <div class="sub_menu">
+                    <div class="leftmenu">
+                        <dl>
+                            <dt>
+                            <volist name="selectsmalltype4" id="sst4">
+                                <dd><a href='#'>&nbsp;</a></dd>
+                                <dd><a href='__APP__/Index/looktype?id={$sst4.id}'>{$sst4['smalltype_name']}</a></dd>
+                            </volist>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            <div align="left"> &nbsp;
+            </div>
+            <li class="nav_item"><a href="#">特色小吃</a><span class="jt">&gt;</span>
+                <div class="sub_menu">
+                    <div class="leftmenu">
+                        <dl>
+                            <dt>
+                            <volist name="selectsmalltype5" id="sst5">
+                                <dd><a href='#'>&nbsp;</a></dd>
+                                <dd><a href='__APP__/Index/looktype?id={$sst5.id}'>{$sst5['smalltype_name']}</a></dd>
+                            </volist>
+                            </dt>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <table width="1024" align="center">
+        <tr height="450">
+            <td width="230">
+            </td>
+            <td>
+                <a href="__APP__/Index/showrecomend"> <img src="__PUBLIC__/images/tiaozhuan.gif" width="600" height="450"/></a>
+            </td>
+            <td width="180">
+                <table width="180" height="450" align="center">
+                    <tr height="25" background='#fccece'>
+                        <td align="left"><font color="#b22222" style="font-size: 18px;">&nbsp;&nbsp;●&nbsp;&nbsp;公告</font>
+                            <table width="80" align="right" height="20">
+                                <tr>
+                                    <td width="75" align="right"><a href="__APP__/Index/gengduo">更多>>></a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr height='10'><td>----------------------------------</td></tr>
+                    <tr height="275"><td>
+                    <marquee direction="down" onmouseover="stop()" onmouseout="start()" scrollamount="3">
+                        <div style="height: 275px;">
+                            <ul>
+                                <volist name='selectnotice' id='sn'>
+                                <li>
+                                    &nbsp;<br>
+                                    <a class="topcs" href="__APP__/Index/gonggaoxiangqin?id={$sn.id}" target="_blank">●{$sn.title}</a>
+                                </li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </marquee>
+            </td></tr>
+        <tr height="60"><td><img src="__PUBLIC__/images/2.gif" /> </td></tr>
+    </table>
+</td>
+</tr>
+</table>
+<table align="center" width="1024">
+    <tr background="__PUBLIC__/images/tuijian.jpg" style="width: 1024px;height: 40px;"><td align="right"><a href="__APP__/Index/showrecomend"><font style="font-size: 20px;color: #9c47c4;">更多>>></font></a></td></tr>
+</table>
+<table align="center" width="1024" height="400">
+
+    <tr align="center">
+
+        <td width="250" align="center">
+
+            <table align="center" border="3" class="table">
+
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230" align="center">
+                        <table width="200" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsre[0]['id']}">
+                                            <img src="{$selectgoodsre[0]['goods_images1']}"  title="世界著名的四大干果" width="200" height="200" border="0">
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsre[0]['id']}"><font color="#808080">{$selectgoodsre[0]['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsre[0]['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsre[0]['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230" align="center">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsre[1]['id']}">
+                                            <img src="{$selectgoodsre[1]['goods_images1']}" title="以肉源绿色、制作工艺历史悠久、肉味鲜美、可长时间存放等特点深受中外游客青睐" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsre[1]['id']}"><font color="#808080">{$selectgoodsre[1]['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsre[1]['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsre[1]['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230" align="center">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsre[2]['id']}">
+                                            <img src="{$selectgoodsre[2]['goods_images1']}" title="绵阳野生猕猴桃，口感酸甜" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsre[2]['id']}"><font color="#808080">{$selectgoodsre[2]['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsre[2]['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsre[2]['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230" align="center">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsre[3]['id']}">
+                                            <img src="{$selectgoodsre[3]['goods_images1']}" title="绵阳纯天然蜂蜜，还有补中，润燥，止痛，解毒功效" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【价格】：<a href="__APP__/Index/lookInfo?id={$selectgoodsre[3]['id']}"><font color="#808080">{$selectgoodsre[3]['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsre[3]['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsre[3]['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table align="center" width="1024">
+    <tr background="__PUBLIC__/images/zuixin.jpg" style="width: 1024px;height: 40px;"><td align="right"><a href="__APP__/Index/showrecomend"><font style="font-size: 20px;color: #9c47c4;">更多>>></font></a></td></tr>
+</table>
+<table align="center" width="1024" height="400">
+
+    <tr align="center">
+        <td width="250" align="center">
+            <table align="center" border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsadd['0']['id']}">
+                                            <img src="{$selectgoodsadd['0']['goods_images1']}"  title="世界著名的四大干果" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsadd['0']['id']}"><font color="#808080">{$selectgoodsadd['0']['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsadd['0']['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsadd['0']['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsadd['1']['id']}">
+                                            <img src="{$selectgoodsadd['1']['goods_images1']}" title="以肉源绿色、制作工艺历史悠久、肉味鲜美、可长时间存放等特点深受中外游客青睐" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsadd['1']['id']}"><font color="#808080">{$selectgoodsadd['1']['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsadd['1']['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsadd['1']['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsadd['2']['id']}">
+                                            <img src="{$selectgoodsadd['2']['goods_images1']}" title="绵阳野生猕猴桃，口感酸甜" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsadd['2']['id']}"><font color="#808080">{$selectgoodsadd['2']['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsadd['2']['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsadd['2']['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+        <td width="250" align="center">
+            <table border="3" class="table">
+                <tr height="20">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td width="230">
+
+                        <table width="200"  border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                                <td width="200" rowspan="6">
+                                    <div align="center">
+
+                                        <a href="__APP__/Index/lookInfo?id={$selectgoodsadd['3']['id']}">
+                                            <img src="{$selectgoodsadd['3']['goods_images1']}" title="绵阳纯天然蜂蜜，还有补中，润燥，止痛，解毒功效" width="200" height="200" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="124" height="32">&nbsp;&nbsp;&nbsp;&nbsp;【名称】：<a href="__APP__/Index/lookInfo?id={$selectgoodsadd['3']['id']}"><font color="#808080">{$selectgoodsadd['3']['goods_name']}</font></a></td>
+                    <td height="16">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="32">&nbsp;&nbsp;&nbsp;&nbsp;【市场价】：<font color="red">{$selectgoodsadd['3']['goods_marketPrice']}</font> 元/斤</td>
+                </tr>
+                <tr>
+                    <td height="32"><a href="__APP__/Index/lookInfo?id={$selectgoodsadd['3']['id']}"><font color="blue" style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;【加入购物车】</font></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+<table width="1024" align="center">
+    <tr>
+        <td>
+    <include file="Public:bottom" />
+</td>
+</tr>
+</table>
+
+</body>
+</html>

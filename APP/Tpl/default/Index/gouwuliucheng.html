@@ -1,0 +1,63 @@
+<html>
+<head><title></title></head>
+
+<body>
+<if condition="$_SESSION['user'] eq null">
+    <include file="Public:top1" />
+    <else /> <include file="Public:top1_1" />
+    </if>
+    <include file="Public:top" />
+<table width="1024" align="center" height="500" bgcolor="#faebd7" background="images/lc4.jpg">
+    <tr>
+        <td>
+
+<table width="700" align="center" height="350">
+    <tr align="center">
+        <td style="font-size: 26px;color: #4F4F4F">
+            购物流程
+        </td>
+    <tr align="center">
+        <td>
+            平武特产网&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-12-1
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 20px;color:#3a6c7e">
+            第一步：登陆/注册
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 18px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老用户选择首页“登录”处填写用户名与密码等信息登录，新用户可以通过首页注册处填写基本信息，注册会员后登录。
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 20px;color:#3a6c7e">
+           第二部：选购商品
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 18px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;挑选好商品，点击放入购物车按钮，查看购物车，进入结算中心。
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 20px;color:#3a6c7e">
+            第三步：填写订单，选择支付
+        </td>
+    </tr>
+    <tr height="40">
+        <td style="font-size: 18px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在支付方式中选择支付，点击确认支付，提交订单，购物完成。
+        </td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+
+<include file="Public:bottom" />
+
+</body>
+</html>
+

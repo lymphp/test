@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>
+    </title>
+</head>
+
+
+<body bgcolor="#faebd7">
+<if condition="$_SESSION['user'] eq null">
+    <include file="Public:top1" />
+    <else /> <include file="Public:top1_1" />
+    </if>
+    <include file="Public:top" />
+<table width="1024" height="600" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="600" align="center" valign="top" background="images/zc.jpg">
+	<table width="500" height="350" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td><div>&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td><div>&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td><div>&nbsp;</div></td>
+        </tr>
+        <tr>
+          <td height="40" bgcolor="#ffdead"><div align="center" style="color: #777777;font-size: 18px;">用户注册协议</div></td>
+        </tr>
+        <tr>
+          <td height="255" bgcolor="#333333"><table width="500" height="350" border="0" align="center" cellpadding="0" cellspacing="1">
+            <tr>
+              <td height="325" bgcolor="#FFFFFF" valign="top">
+			  <DIV style="HEIGHT:325px;WIDTH:500px">
+             &nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;             用户注册协议<br>
+               <br>
+               <table width="400" border="0" align="center" cellpadding="0" cellspacing="0">
+                 <tr>
+                   <td height="152" valign="top"><div align="left">
+                           为维护网上公共秩序和社会稳定，请您自觉遵守以下条款：<br><br>
+                           为了更好的管理和维护网站，请您自觉遵守以下条款：<br><br>
+                           <p>（一）不得利用本网站进行商业广告宣传；</p>
+                           <p>（二）不得利用本网站发送非法文章；</p>
+                           <p>（三）不得利用本网站进行上传非法图片；</p>
+                           <p>（四）互相尊重，对自己的言论和行为负责；</p>
+                           <p>（五）普通用户欲删除文章，评论，图片等信息，请与管理员联系；</p>
+                           <p>（六）本网站版权归明日科技公司，不得对本网站进行转载或作为私用。</p>
+				   </div></td>
+                 </tr>
+               </table>
+               <br>
+				</td>
+            </tr>
+            <tr>
+              <td height="25" bgcolor="#FFFFFF"><div align="center"><a href="__APP__/Index/index" style="color: #CC0000;font-size: 20px;">不同意</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="__APP__/Index/zhuce" style="color: #CC0000;font-size: 20px;">同意以上条款</a></div></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>   </td>
+  </tr>
+</table>
+
+<include file="Public:bottom" />
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>平武特产网站</title>
+    <link href="__ROOT__/Public/css/cssreset.css" rel="stylesheet">
+    <link href="__ROOT__/Public/css/main.css" rel="stylesheet">
+</head>
+
+<script language="javascript">
+    function chkinput1(form){
+        if(form.name.value==""||form.name.value=="请输入关键词"){
+            alert("请输入商品名称!");
+            form.name.select();
+            return(false);
+        }
+        return(true);
+    }
+</script>
+
+<body>
+    <include file="top1" />
+<table width="1024" height="90" align="center">
+    <tr>
+        <td width="242" height="84"><img src="__PUBLIC__/images/pingwu.jpg" width="242" height="84" /></td>
+        <td width="283"><img src="__PUBLIC__/images/shitopadamd.jpg" width="283" height="84" /></td>
+        <td width="490"><img src="__PUBLIC__/images/tejia.jpg" width="490" height="82" /></td>
+    </tr>
+</table>
+
+<table width="1024" align="center" bgcolor="#ffe4e1">
+    <form name="form" method="post" action="__APP__/Index/search" onSubmit="return chkinput1(this)">
+        <tr>
+            <td  background="__PUBLIC__/images/top1.jpg" height="50" width="1024" align="right">
+                <div align="right">&nbsp;
+                    <span><font color="#483d8b" style="font-size: 18px;">搜索商品：</font></span>
+                    <input type="text" name="goods_name" size="25" class="inputcss" style="background-color:#e8f4ff;font-size: 16px;" value="请输入关键词" onfocus="if(this.value=='请输入关键词') this.value='';" onMouseOver="this.style.backgroundColor='#ffffff'" onMouseOut="this.style.background='#bbbbbb'">
+                    <input name="submit" type="submit" class="buttoncss" value="立即查找" style="height:30px;width:80px;display:inline-block;">
+                </div>
+            </td>
+        </tr>
+    </form>
+</table>
+
+    <table width="1024" height="40" align="center" bgcolor="#dc143c">
+        <tr align="center">
+            <td width="170" align="center">&nbsp;
+                <a href="__APP__/Index/index" style=" color:black;font-size: 22px;">本站首页</a></td>
+            <td width="170" align="center">&nbsp;
+                 <a href="__APP__/Index/showrecomend" style=" color:black;font-size: 22px;">推荐商品</a></td>
+            <td width="170" align="center">&nbsp;
+                <a href="__APP__/Index/usercenter" style=" color:black;font-size: 22px;">用户中心</a></td>
+            <td width="170" align="center">&nbsp;
+                <a href="__APP__/Index/aboutus" style=" color:black;font-size: 22px;">关于我们</a></td>
+            <td width="170" align="center">&nbsp;
+                <a href="__APP__/Order/findddForm" style=" color:black;font-size: 22px;">订单查询</a></td>
+            <td width="174" align="center">&nbsp;
+                <a href="#" style=" color:black;font-size: 22px;">我的购物车</a>
+            </td>
+    </tr>
+    </table>
+
+
+
+</body>
+</html>

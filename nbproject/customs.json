@@ -1,0 +1,27 @@
+{
+    "elements": {
+        "foreach": {},
+        "form": {},
+        "volist": {}
+    },
+    "attributes": {
+        "background": {
+            "context": "div"
+        },
+        "leftmargin": {
+            "context": "body"
+        },
+        "width": {
+            "context": "tr"
+        },
+        "align": {
+            "context": "summary"
+        },
+        "value": {
+            "context": "input"
+        },
+        "height": {
+            "context": "tr"
+        }
+    }
+}

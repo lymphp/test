@@ -1,0 +1,43 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <if condition="$_SESSION['user'] eq null">
+    <include file="Public:top1" />
+    <else /> <include file="Public:top1_1" />
+    </if>
+    <include file="Public:top" />
+<form id="form1" name="form1" method="post" action="">
+  <table width="1024" height="438" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="438" valign="top" bgcolor="#FFFFFF"><table width="550" height="43" border="0" align="center" cellpadding="0" cellspacing="0">
+          <table width="1024" height="500" border="1">
+            <tr>
+              <td width="141" rowspan="2" align="center" valign="top" bgcolor="#FFCCCC">
+                <img src="__PUBLIC__/images/21.jpg" />
+              </td>
+              <td width="100" height="60" bgcolor="#FFCCCC" style="font-size: 40px;color: #3a6c7e;font-family: 华文行楷;">&nbsp;&nbsp;&nbsp;网站介绍</td>
+              <td width="147" rowspan="2" align="center" valign="top" bgcolor="#FFCCCC">
+                <img src="__PUBLIC__/images/23.jpg" />
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffe4c4"><font style="font-size: 20px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平武特产网是一个搜罗了平武这个地方的各种特色产品的网站，有各种美味的小吃、有对人体有益的青梅酒、有色香味俱全的老腊肉，有深山里纯正的蜂蜜等。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平武是一个依山傍水的城市，平武生产的食品都是有机绿色的，不会加入化学物质，平武的食品都保存着每一样的食材本身的风味，每一样食品都是纯天然的。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们网站本着&quot;让每一位美食爱好者都吃的好，吃的健康&quot;的宗旨，努力做出&quot;健康、美味、养身&quot;的食品，竭诚为广大美食爱好者提供优质的食品和服务。<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
+              </td>
+              </font>
+            </tr>
+          </table>
+          </td>
+          </tr>
+        </table>
+</form>
+</body>
+
+<include file="Public:bottom" />
+
+</html>

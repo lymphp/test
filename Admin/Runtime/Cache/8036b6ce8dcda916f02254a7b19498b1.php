@@ -1,0 +1,224 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<html>
+<head>
+
+    <title>主页</title>
+    <!--
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    -->
+    <base target="iframe"/>
+    <style type="text/css">
+        a{
+            text-decoration: none;
+            color: #0000FF;
+            font-weight:bold;
+        }
+
+        .parent{
+            text-decoration: none;
+            color: #00ffFF;
+            font-weight:bold;
+        }
+
+        #main{
+            width:1024px;
+            height:900px;
+            border:0px solid #C00;
+        }
+
+        .top{
+            height:200px;
+            width:1024px;
+            text-align:left;
+            background: url("__ROOT__/Public/images/top.jpg");
+        }
+
+        .left{
+            /* background:#073862; */
+            /* background:#070125; */
+            height:700px;
+            width:200px;
+            background:#79acaf;
+            float:left;
+        }
+
+        .right{
+            /* background:#FC9; */
+            background:#97c2b2;
+            height:700px;
+            width:824px;
+            float:right;}
+
+        /*去掉自带的小三角*/
+        details summary::-webkit-details-marker {
+            display: none;
+            color:#ffffff;
+        }
+
+        /*自定义图标，可用图片或字符,如果使用图片，请把content的值设置成空字符*/
+        /*展开*/
+        .menu summary:before {
+            /* content:null; */
+            content: "+";
+            color:#ffffff;
+            /* background: url(../images/cdbg.jpg) no-repeat center center; */ /*收起时的图片*/
+            vertical-align: middle;
+        }
+
+        /*收起*/
+        .menu[open] summary:before {
+            content: "-";
+            color:#ffffff;
+            font-weight:bold;
+            /*background: url(../Images/down.png) no-repeat center center;*/ /*展开时的图片*/
+        }
+
+        .left .menu ul{
+            list-style-type:none;
+        }
+        .left .menu ul a.link{
+
+        }
+        ul li:hover {
+            background:#c8f4ee;
+        }
+        ul li:hover a{
+            color:#b61d1d;
+        }
+
+        .left .menu ul li{
+            list-style-type:none;
+
+        }
+        .left summary{
+            background:url(./images/anniu1.jpg);
+            width:200px;
+            height:35px;
+        }
+    </style>
+    <script language="JavaScript">
+        //iframe高度自适应
+        function IFrameReSize(iframename) {
+
+            var pTar = document.getElementById(iframename);
+
+            if (pTar) {  //ff
+
+                if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+
+                    pTar.height = pTar.contentDocument.body.offsetHeight;
+
+                } //ie
+
+                else if (pTar.Document && pTar.Document.body.scrollHeight) {
+
+                    pTar.height = pTar.Document.body.scrollHeight;
+
+                }
+
+            }
+
+        }
+
+        //iframe宽度自适应
+
+        function IFrameReSizeWidth(iframename) {
+
+            var pTar = document.getElementById(iframename);
+
+            if (pTar) {  //ff
+
+                if (pTar.contentDocument && pTar.contentDocument.body.offsetWidth) {
+
+                    pTar.width = pTar.contentDocument.body.offsetWidth;
+
+                }  //ie
+
+                else if (pTar.Document && pTar.Document.body.scrollWidth) {
+
+                    pTar.width = pTar.Document.body.scrollWidth;
+
+                }
+
+            }
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+<table width="1024" align="center">
+    <tr width="1024">
+        <td width="1024">
+            <div id="main">
+                <div class="top">
+                    <div align="right" style="color:blanchedalmond;font-size: 22px;">当前管理员：【<font color="red"><?php echo ($_SESSION['admin']); ?></font>】</div>
+                    <div class="top-left">
+                        &nbsp;<br>
+                        &nbsp;<br>
+                        <font style="font-size:52px;" color="black" face="华文行楷">&nbsp;平武特产</font>
+                    </div>
+                    <div align="right">
+                        &nbsp;<br>
+                        &nbsp;<br>
+                        <font style="font-size:52px;" color="black" face="华文行楷">后台管理系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="left">
+                        <details class="menu">
+                            <summary align="center">&nbsp;<a href="__ROOT__/admin.php/Index" class="parent"><font style="font-size:26px;">商品管理</font></a></summary>
+                            <ul style="font-size:20px">
+                                <li><a href="__URL__/selectGoods">查询商品</a></li>
+                                <li><a href="__URL__/addGoodsForm">添加商品</a></li>
+                                <li><a href="__URL__/updateGoodsList">修改商品</a></li>
+                                <li><a href="__URL__/deleteGoodsList">删除商品</a></li>
+                                <li><a href="__URL__/deleteSmallTypeList">删除商品类别</a></li>
+                                <li><a href="__URL__/addSmallTypeForm">添加商品类别</a></li>
+
+                            </ul>
+                        </details>
+                        <details class="menu">
+                            <summary align="center">&nbsp;<a href="__ROOT__/admin.php/User" class="parent"><font style="font-size:26px;">用户管理</font></a></summary>
+                            <ul style="font-size:20px;">
+                                <li><a href="__ROOT__/admin.php/User/userList">用户信息</a></li>
+                                <li><a href="__ROOT__/admin.php/User/userLeaveWord">用户留言</a></li>
+                            </ul>
+                        </details>
+                        <details class="menu">
+                            <summary align="center">&nbsp;<a href="__ROOT__/admin.php/Order" class="parent"><font style="font-size:26px;">订单管理</font></a></summary>
+                            <ul style="font-size:20px;">
+                                <li><a href="__ROOT__/admin.php/Order/selectOrderForm">查询订单</a></li>
+                                <li><a href="__ROOT__/admin.php/Order/editOrderForm">编辑订单</a></li>
+                            </ul>
+                        </details>
+                        <details class="menu">
+                            <summary align="center">&nbsp;<a href="__ROOT__/admin.php/Notice" class="parent"><font style="font-size:26px;">信息管理</font></a></summary>
+                            <ul style="font-size:20px;">
+                                <li><a href="__ROOT__/admin.php/Notice/noticeGuanLi">公告管理</a></li>
+                                <li><a href="__ROOT__/admin.php/Notice/addNoticeForm">添加公告</a></li>
+                                <li><a href="__ROOT__/admin.php/Notice/commentGuanLi">评论管理</a></li>
+                            </ul>
+                        </details>
+                        <details class="menu">
+                            <summary align="center">&nbsp;<a href="__ROOT__/admin.php/Admin" class="parent"><font style="font-size:26px;">管理员管理</font></a></summary>
+                            <ul style="font-size:20px;">
+                                <li><a href="__ROOT__/admin.php/Admin/editNameAndPasswordForm">修改名字和密码</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="right">
+                        <iframe name="iframe" src="__URL__/welcome" scrolling="no" frameborder="0" height="100%" id="iframe" width="100%" onload='IFrameReSize("iframe");IFrameReSizeWidth("iframe");'></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>

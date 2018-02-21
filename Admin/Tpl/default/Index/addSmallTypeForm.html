@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>添加商品类别</title>
+        <link rel="stylesheet" type="text/css" href="../css/font.css">
+        <style type="text/css">
+            <!--
+            .style1 {color: #FFFFFF}
+            -->
+        </style>
+        <script language="javascript">
+            function chkinput(form)
+            {
+                if (form.smalltype_name.value == "")
+                {
+                    alert('请输入新增商品类别名!');
+                    form.smalltype_name.select();
+                    return(false);
+                }
+                return(true);
+            }
+
+        </script>
+    </head>
+
+    <body leftmargin="0" bottommargin="0" topmargin="0">
+        <br>
+        <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+            <form name="form1" method="post" action="__URL__/addSmallType" onSubmit="return chkinput(this);">
+                <tr height="200">
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40" bgcolor="#7fffd4"><div align="center" style="font-size: 24px;">添加商品类别</div></td>
+                </tr>
+                <tr>
+                    <td height="90" bgcolor="#666666"><table width="500" height="35" border="0" cellpadding="0" cellspacing="1">
+                            <tr bgcolor="#FFFFFF" height="45">
+                                <td width="250" align="center">
+                                    选择大类别：
+                                </td>
+                                <td>
+                                    <select name="type_id" style="height:43px;">
+                                        <option selected value="1">健康饮品</option>
+                                        <option value="2">肉类制品</option>
+                                        <option value="3">果蔬制品</option>
+                                        <option value="4">野菌干果</option>
+                                        <option value="5">特色小吃</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF" height="45">
+                                <td width="250" bgcolor="#FFFFFF"><div align="center">小类别名称：</div></td>
+                                <td bgcolor="#FFFFFF"><div align="left">
+                                        <input type="text" name="smalltype_name" class="inputcss" size="45" style="height:43px;">
+                                    </div></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height="25"><div align="center">
+                            <input name="submit" type="submit" style="width:80px;height:25px;" id="submit" value="添加">
+                        </div></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

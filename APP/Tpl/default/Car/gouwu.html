@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>
+    </title>
+</head>
+
+
+<body bgcolor="#faebd7">
+    <include file="Public:top1_1" />
+    <include file="Public:top" />
+
+    <table width="1024" height="500" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="1024" height="500" valign="top" bgcolor="#FFFFFF">
+                <table width="1024" height="20" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <form name="form1" method="post" action="gouwu.php">
+                        <tr>
+                            <td height="32" bgcolor="#ffb6c1"><div align="center" style="color: #FFFFFF;font-size: 18px;">
+                                    {$_SESSION['user']}的购物车</div></td>
+                        </tr>
+                        <tr>
+                            <td  bgcolor="#555555"><table width="1000" border="1" align="center" cellpadding="0" cellspacing="1">
+                                    
+                                        <tr>
+                                            <td width="200" height="30" bgcolor="#FFFFFF"><div align="center">商品图片</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">商品名称</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">数量</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">市场价</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">会员价</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">折扣</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">小计</div></td>
+                                            <td width="114" bgcolor="#FFFFFF"><div align="center">操作</div></td>
+                                        </tr>
+                                                <tr>
+                                                    <td height="200"><img src="<?php echo @$info['tupian'];?>" width="200" height="200" /></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center"><a href="lookinfo.php?id=<?php echo @$info['id'];?>"><font style="font-size: 18px;color: maroon;"><?php echo @$info[mingcheng];?></font></a></div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center">
+                                                            <input type="text" name="<?php echo @$info[id];?>" size="2" class="inputcss" value="">
+                                                        </div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center">元</div></td>
+                                                    <td height="40" bgcolor="#FFFFFF"><div align="center"><a href="removegwc.php?id=<?php echo @$info[id]?>">删除</a></div></td>
+                                                </tr>
+                                            
+                                        <tr>
+                                            <td height="40" colspan="8" bgcolor="#FFFFFF"><div align="right">
+                                                    <table width="1024" height="40" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td width="520"><div align="right">
+                                                                    <input name="submit2" type="submit" class="buttoncss" value="更改商品数量" style="font-size: 18px;width: 125px;height: 25px;"></div>
+                                                            </td>
+                                                            <td width="300"><div align="center"><font style="font-size: 18px;">总计：<?php echo @$total;?>元&nbsp;</font></div></td>
+                                                            <td width="200"><div align="center"><a href="jiezhang.php"><font style="font-size: 20px;color: red;">付款</font></a></div></td>
+                                                            <td width="200"><div align="center"><a href="gouwu.php?qk=yes"><font style="font-size: 18px;color: #9A0000;">清空购物车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></a></div></td>
+                                                        </tr>
+                                                    </table>
+                                                </div></td>
+                                        </tr>
+                                </table></td>
+                        </tr>
+                    </form>
+                </table></td>
+
+        </tr>
+    </table>
+
+<include file="Public:bottom" />
+
+</body>
+</html>
